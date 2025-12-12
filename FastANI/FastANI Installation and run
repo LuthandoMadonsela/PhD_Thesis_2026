@@ -1,0 +1,10 @@
+#Installation 
+
+conda install -y -c bioconda fastani
+
+#Upload all your genomes/bins into the same folder in fasta format
+#Set two files named 'querylist.txt' and 'reflist.txt - In the two txt files, write a list of your genomes/bins (the two should have exactly the same list)
+
+#Run FatsANI
+
+fastANI --threads 2 --ql querylist.txt --rl reflist.txt --matrix -o fastani.out 
