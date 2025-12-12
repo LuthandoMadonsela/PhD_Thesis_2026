@@ -1,0 +1,26 @@
+#Installation
+
+conda create -y -n autometa
+conda activate autometa
+conda install -y -c bioconda -c conda-forge autometa
+autometa-config --section databases --option markers --value /home/sam/Databases/autometa_markers #Note: Leave this path as is, do not change it to your user name
+autometa-config --section databases --option ncbi --value /home/sam/Databases/autometa_ncbi_sam #Same here - leave it as is
+
+#Run Autometa
+
+sbatch autometa_flagged.sh \
+-o /path/to/where/output/should/go \
+-a /path/to/scaffolds.fasta \
+-s basename_of_choice \
+-n /home/sam/Databases/autometa_ncbi_sam \
+-m /home/sam/Databases/autometa_markers \
+-l 3000 -v spades -c 8
+
+#Example
+sbatch autometa_flagged.sh \
+-o /home/luthando/Autometa \
+-a /home/luthando/Autometa/N1_scaffolds.fasta \
+-s Test_run_output \
+-n /home/sam/Databases/autometa_ncbi_sam \
+-m /home/sam/Databases/autometa_markers \
+-l 3000 -v spades -c 8
