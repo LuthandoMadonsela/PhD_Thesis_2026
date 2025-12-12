@@ -1,0 +1,20 @@
+#Installation
+
+conda create -n phylophlan
+conda activate phylophlan
+conda install -c bioconda phylophlan
+
+#Generate a new folder called “Phylophlan_input”
+#Add all your .faa files for your MAGs and reference genomes here
+#Add your phylophlan.sh and supermatrix_aa.cfg scripts here
+
+#Run phylophlan
+
+sbatch phylophlan.sh
+
+#Your output files should be in another folder in your input folder called “phylophlan_output”
+#Add your raxml.sh script here
+
+#Generate your phylogenetic tree, Run raxml.sh
+
+sbatch raxm.sh
