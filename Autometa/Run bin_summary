@@ -1,0 +1,7 @@
+conda install -y -c anaconda pandas
+conda install -y -c conda-forge biopython
+
+#Run bin_summary
+
+python bin_summary.py /path/to/refinement/fasta/files
+e.g. python bin_summary.py /home/luthando/Autometa/Bins
