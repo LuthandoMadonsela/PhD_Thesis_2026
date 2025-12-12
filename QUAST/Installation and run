@@ -1,0 +1,8 @@
+#installation
+conda create --name quast_env
+conda activate quast_env
+conda install -y -c bioconda quast
+
+#Run QUAST
+quast scaffolds.fasta > Quast_output
+conda deactivate
